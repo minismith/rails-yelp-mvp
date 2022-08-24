@@ -1,0 +1,15 @@
+<div class="container pb-5">
+<h1 class="my-3">Restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+      <li><%= restaurant.name %>
+        <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-outline-dark"%>
+      </li>
+      <br>
+  <% end %>
+</ul>
+
+<%= link_to "Add a restaurant",  new_restaurant_path, class: "btn btn-dark"%>
+
+</div>
