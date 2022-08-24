@@ -1,15 +1,16 @@
 <div class="container pb-5">
 <h1 class="my-3">Restaurants</h1>
 
-<ul>
+<div class="">
   <% @restaurants.each do |restaurant| %>
-      <li><%= restaurant.name %>
+      <div class="mx-3 p-5 border rounded d-flex justify-content-between w-50">
+        <%= restaurant.name %>
         <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-outline-dark"%>
-      </li>
+      </div>
       <br>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "Add a restaurant",  new_restaurant_path, class: "btn btn-dark"%>
+<%= link_to "Add a restaurant",  new_restaurant_path, class: "btn btn-dark d-flex justify-content-center"%>
 
 </div>
